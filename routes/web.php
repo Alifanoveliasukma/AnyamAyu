@@ -1,7 +1,12 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\AuthController;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+// Home
+Route::get('/', [HomeController::class, 'index'])->name('home.index');
+
+// Registration
+Route::get('/registration', [AuthController::class, 'registration'])->name('auth.registration');
