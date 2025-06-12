@@ -8,18 +8,18 @@ class AuthController extends Controller
 {
     public function registration()
     {
-        // Logic for displaying the registration form
+        $data['meta_title'] = 'Registration';
         return view('auth.registration');
     }
     public function login()
     {
-        // Logic for displaying the login form
+        $data['meta_title'] = 'Login';
         return view('auth.login');
     }
 
     public function forgot()
     {
-        // Logic for displaying the forgot password form
+        $data['meta_title'] = 'Forgot Password';
         return view('auth.forgot');
     }
 }
