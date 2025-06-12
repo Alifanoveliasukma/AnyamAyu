@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anyam Ayu | Register</title>
+    <title>Register | Anyam Ayu</title>
     <link rel="stylesheet" type="text/css" href="{{ url('css/style.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
 </head>
@@ -12,9 +12,9 @@
         <div class="wrapper">
             <div class="title"><span>Registration</span></div>
             <form action="{{ url('registration') }}" method="POST">
-                 <div class="row">
+                <div class="row">
                     <i class="fas fa-user"></i>
-                    <input type="text" name="email" placeholder="Username" required>
+                    <input type="text" name="username" placeholder="Username" required>
                 </div>
                 <div class="row">
                     <i class="fas fa-user"></i>
@@ -37,11 +37,11 @@
                     </select>
                 </div>
 
-                <div class="pass" style="margin-top: 10px;"><a>Forgot Password</a></div>
+                <div class="pass" style="margin-top: 10px;"><a href="{{ url('forgot')}}">Forgot Password</a></div>
                 <div class="row button">
                     <input type="submit" value="Registration">
                 </div>
-                <div class="signup-link">Sign In? <a>Login</a></div>
+                <div class="signup-link">Sign In? <a href="{{ url('login')}}">Login</a></div>
                 <div class="signup-link">Welcome Page? <a href="{{ url('/')}}">Welcome Page</a></div>
 
             </form>

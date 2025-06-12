@@ -10,3 +10,7 @@ Route::get('/', [HomeController::class, 'index'])->name('home.index');
 
 // Registration
 Route::get('/registration', [AuthController::class, 'registration'])->name('auth.registration');
+
+Route::get('login', [AuthController::class, 'login'])->name('auth.login');
+
+Route::get('forgot', [AuthController::class, 'forgot'])->name('auth.forgot');
