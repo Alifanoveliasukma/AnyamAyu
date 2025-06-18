@@ -2,6 +2,7 @@
 
 @section('content')
   <div class="container">
+     @include('layouts._message')
         <div class="wrapper">
             <div class="title"><span>Login</span></div>
             <form action="{{ url('registration') }}" method="POST">
