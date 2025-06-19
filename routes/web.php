@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\DashboardController;
 
 
 // Home
@@ -16,3 +17,15 @@ Route::get('login', [AuthController::class, 'login'])->name('auth.login');
 Route::post('login_post', [AuthController::class, 'login_post'])->name('auth.login.post');
 
 Route::get('forgot', [AuthController::class, 'forgot'])->name('auth.forgot');
+
+Route::group(['middleware' => 'superadmin'], function(){ 
+    Route::get('superadmin/dashboard', [DashboardController::class,'dashboard']);
+});
+
+Route::group(['middleware' => 'admin'], function(){ 
+    Route::get('admin/dashboard', [DashboardController::class,'dashboard']);
+});
+
+Route::group(['middleware' => 'user'], function(){ 
+    Route::get('user/dashboard', [DashboardController::class,'dashboard']);
+});

@@ -44,18 +44,20 @@ class AuthController extends Controller
 
     public function login_post(Request $request)
     {
-    
         if(Auth::attempt(['email' => $request->email, 'password' => $request->password], true))
         {
             if(Auth::User()->is_role == "2")
             {
-                echo "Super Admin";die();
+                return redirect()->intended('superadmin/dashboard');
+
             }else if(Auth::User()->is_role == "1")
             {
-                echo "Admin";die();
+                return redirect()->intended('admin/dashboard');
+
             } else if(Auth::User()->is_role == "0")
             {
-                echo "User";die();
+                return redirect()->intended('user/dashboard');
+
             }else {
                 return redirect('login')->with('error', 'No Available Email.. Please Check');
             }
