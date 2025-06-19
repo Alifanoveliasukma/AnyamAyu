@@ -13,5 +13,6 @@ Route::get('/registration', [AuthController::class, 'registration'])->name('auth
 Route::post('registration_post', [AuthController::class, 'registration_post'])->name('auth.registration.post');
 
 Route::get('login', [AuthController::class, 'login'])->name('auth.login');
+Route::post('login_post', [AuthController::class, 'login_post'])->name('auth.login.post');
 
 Route::get('forgot', [AuthController::class, 'forgot'])->name('auth.forgot');
