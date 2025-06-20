@@ -9,6 +9,6 @@ class HomeController extends Controller
     public function index()
     {
         $data['meta_title'] = 'Welcome';
-        return view('layouts.index', $data);
+        return view('index', $data);
     }
 }
