@@ -7,7 +7,7 @@
         <span style="color: yellow;">{{ $errors->first('password') }}<br></span>
         <span style="color: yellow;">{{ $errors->first('confirm_password') }}<br></span>
 
-        @include('layouts._message')
+        @include('_message')
         <div class="wrapper">
             <div class="title"><span>Registration</span></div>
             <form action="{{ url('registration_post') }}" method="POST">
