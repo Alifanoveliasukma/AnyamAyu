@@ -15,7 +15,6 @@
             <div class="signup-link"> Home Page ? 
                 <a href="{{ url('/') }}"> Welcome Page (Home)</a>
             </div>
-
         </form>
     </div>
 </div>

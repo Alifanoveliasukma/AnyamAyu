@@ -3,7 +3,7 @@
 @section('content')
     <div class="container">
         <div class="wrapper">
-            <div class="title"><span>Welcome Page 999</span></div>
+            <div class="title"><span>Welcome Page</span></div>
             <form>
                 @if(Auth::check())
 

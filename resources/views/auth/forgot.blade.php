@@ -1,12 +1,17 @@
 @extends('layouts.app')
 @section('content')
+
+
   <div class="container">
+    @include('layouts._message')
+    
         <div class="wrapper">
             <div class="title"><span>Forgot Password</span></div>
-            <form action="{{ url('registration') }}" method="POST">
+            <form action="{{ url('forgot_post') }}" method="POST">
+                {{ csrf_field()}}
                 <div class="row">
                     <i class="fas fa-user"></i>
-                    <input type="email" name="" placeholder="Email" required>
+                    <input type="email" name="email" value="{{ old('email')}}" placeholder="Email" required>
                 </div>
                 
                 <div class="pass" style="margin-top: 10px;"><a href="{{ url('login')}}">Login</a></div>
