@@ -17,6 +17,7 @@ Route::get('login', [AuthController::class, 'login'])->name('auth.login');
 Route::post('login_post', [AuthController::class, 'login_post'])->name('auth.login.post');
 
 Route::get('forgot', [AuthController::class, 'forgot'])->name('auth.forgot');
+Route::post('forgot_post', [AuthController::class, 'forgot_post']);
 
 Route::group(['middleware' => 'superadmin'], function(){ 
     Route::get('superadmin/dashboard', [DashboardController::class,'dashboard']);
